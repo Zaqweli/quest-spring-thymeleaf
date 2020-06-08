@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="Fr" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <title>Doctor Secret Room</title>
@@ -6,11 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>Header TODO</header>
+
+<header th:replace="fragments/header.html :: top"></header>
+
 <section>
-    <h1>Welcome $doctorname</h1>
-    <h3>Your number is $doctornumber</h3>
+    <h1 th:text="|Welcome ${name}|">Welcome dear doctor</h1>
+    <h3 th:text="|Your number is ${number}|">Your number is </h3>
 </section>
-<footer>Footer TODO</footer>
+<footer th:replace="fragments/footer.html :: bottom">Fragment</footer>
 </body>
 </html>
